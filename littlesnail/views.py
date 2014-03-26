@@ -9,9 +9,14 @@ import urllib,urllib2,time,hashlib
 
 TOKEN = "your token"
 
-YOUDAO_KEY = your_youdao_key
+YOUDAO_KEY = "your_youdao_key"
 YOUDAO_KEY_FROM = "your_youdao_key_from"
 YOUDAO_DOC_TYPE = "xml"
+
+try:
+    from keys import *
+except:
+    pass
 
 @csrf_exempt
 def handleRequest(request):
